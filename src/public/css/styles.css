@@ -1,0 +1,149 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.section-info {
+    background-image: linear-gradient(#f27329, #faaa36);
+}
+
+.info {
+    color: #FFFFFF;
+}
+
+.info h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5% 0;
+}
+
+.info span {
+    color: #ffcb08;
+}
+
+#submit-button {
+    /* background-color: #d97b6c; */
+    /* border-color: #d97b6c; */
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    /* color: #ffffff; */
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: top;
+    transition: all 0.3s ease;
+    padding: 18px 48px;
+    width: 230px;
+    border: 0;
+}
+
+@media only screen and (max-width: 575px) {
+    #submit-button {
+        position: fixed;
+        bottom: 0;
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+/* .button {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center; */
+/*  */
+/* align-items: center; */
+/*  */
+/* padding: 18px 48px;
+    vertical-align: top;
+    transition: all 0.3s ease;
+    width: 230px;
+    border: 0;
+} */
+
+.button-request {
+    background-color: #1a75da;
+    color: white;
+}
+
+.button-request:hover {
+    background-color: #146bcc;
+    color: white;
+    text-decoration: none;
+}
+
+/* FORMULARIO */
+.contact-form {
+    width: 100%;
+    /*  */
+    height: 100%;
+    /*  */
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+form .contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+/* border-radius: 15px; border: none; padding-left: 15px; */
+
+.input {
+    border-radius: 15px;
+    border: none;
+    padding-left: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    margin-bottom: 20px;
+    padding: 5px;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 3px; */
+    background-color: #f2f2f2;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: none;
+    padding-left: 15px;
+    /* border-radius: 5px; */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+} */

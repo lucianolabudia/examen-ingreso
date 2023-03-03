@@ -38,6 +38,7 @@ const clientGet = (req, res = response) => {
 const clientPost = (req, res) => {
 
     const body = req.body;
+    
     axios.post(baseURL + '/', body)
     .then( (result) => {
         console.log(result.data);
