@@ -7,7 +7,7 @@ const baseURL = process.env.URL_API;
 // Método GET de API propia
 const clientGet = (req, res = response) => {
     // Solicitud GET utilizando axios a la URL especificada en la variable baseURL
-    axios.get(baseURL+'/')
+    axios.get(baseURL + '/')
     .then( (result) => {
         // Si la solicitud fue exitosa se imprimime en consola los datos obtenidos
         console.log(result.data);
@@ -27,13 +27,37 @@ const clientGet = (req, res = response) => {
             res.status(400).send(error);
         }
     });
+
+    // Prueba del GET
+    // res.json({
+    //     msg: 'get API - controller'
+    // });
 }
 
+// Método POST de API propia
 const clientPost = (req, res) => {
 
-    res.json({
-        msg: 'post API - controller'
+    const body = req.body;
+    axios.post(baseURL + '/', body)
+    .then( (result) => {
+        console.log(result.data);
+        res.send(result.data);
+    }).catch( (error) => {
+        if (error.response) {
+            const { status,statusText } = error.response;
+            console.log(error);
+            console.log(status, statusText);
+            res.status(status).send(error);
+        } else {
+            res.status(400).send(error);
+        }
     });
+
+
+    // Prueba del POST
+    // res.json({
+    //     msg: 'post API - controller'
+    // });
 }
 
 module.exports = {
