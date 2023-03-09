@@ -66,9 +66,14 @@ body {
     }
 }
 
+.button {
+    padding: 0.5rem 4rem
+}
+
 .button-request {
     background-color: #1a75da;
     color: white;
+    padding: 0.5rem 4rem
 }
 
 .button-request:hover {
@@ -140,23 +145,6 @@ button:hover {
     background-color: #3e8e41;
 } */
 
-#mi-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid black;
-    z-index: 9999;
-    display: none;
-}
-
-#cerrar-popup {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
 
 .error-message {
     background-color: red;
@@ -164,4 +152,12 @@ button:hover {
     padding: 2px;
     text-align: center;
     border-radius: 15px;
+}
+
+.spinner {
+    /* visibility: hidden; */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
