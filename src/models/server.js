@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 
 class Server {
@@ -19,7 +20,10 @@ class Server {
         this.app.use( cors() );
 
         // Lectura y parseo del body
-        this.app.use( express.json() );
+        this.app.use( bodyParser.json() );
+
+        // Habilitar lectura de datos de formulario
+        this.app.use( bodyParser.urlencoded({extended: true}));        
 
         // Servir el contenido estatico
         this.app.use( express.static('src/public') );

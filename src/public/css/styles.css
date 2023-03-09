@@ -34,11 +34,12 @@ body {
 #submit-button {
     /* background-color: #d97b6c; */
     /* border-color: #d97b6c; */
+    /* text-align: center; */
+    /* color: #ffffff; */
+    /* --------------- */
     text-transform: uppercase;
     border-radius: 6px;
-    text-align: center;
     font-weight: bold;
-    /* color: #ffffff; */
     font-size: 18px;
     display: inline-block;
     vertical-align: top;
@@ -48,31 +49,22 @@ body {
     border: 0;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 678px) {
+    #nav-image {
+        text-align: center;
+        margin: auto;
+    }
+
     #submit-button {
-        position: fixed;
+        display: flex;
         bottom: 0;
         font-size: 14px;
-        width: 100%;
+        width: auto;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 15px;
     }
 }
-
-/* .button {
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 6px;
-    font-size: 14px;
-    display: inline-block;
-    text-align: center; */
-/*  */
-/* align-items: center; */
-/*  */
-/* padding: 18px 48px;
-    vertical-align: top;
-    transition: all 0.3s ease;
-    width: 230px;
-    border: 0;
-} */
 
 .button-request {
     background-color: #1a75da;
@@ -147,3 +139,29 @@ textarea:focus {
 button:hover {
     background-color: #3e8e41;
 } */
+
+#mi-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 9999;
+    display: none;
+}
+
+#cerrar-popup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.error-message {
+    background-color: red;
+    color: #FFFFFF;
+    padding: 2px;
+    text-align: center;
+    border-radius: 15px;
+}

@@ -1,5 +1,6 @@
 const { response } = require('express');
 
+
 // Axios
 const axios = require('axios');
 const baseURL = process.env.URL_API;
@@ -35,8 +36,8 @@ const clientGet = (req, res = response) => {
 }
 
 // Método POST de API propia
-const clientPost = (req, res) => {
-
+const clientPost = async (req, res) => {
+    
     const body = req.body;
     
     axios.post(baseURL + '/', body)

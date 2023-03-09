@@ -1,5 +1,7 @@
 const { Router } = require('express');
+const { check } = require('express-validator');
 const { clientGet, clientPost } = require('../controllers/clientController');
+const { validateFields } = require('../middlewares/validator');
 
 const router = Router();
 
@@ -16,7 +18,13 @@ router.get('*', (req, res) => {
 });
 
 // POST
-router.post('/', clientPost);
+router.post('/', [
+    check('name').notEmpty().withMessage('El nombre es obligatorio'),
+    check('email').isEmail().withMessage('El email no es válido'),
+    check('subject').notEmpty().withMessage('El asunto es obligatorio'),
+    check('message').notEmpty().withMessage('El mensaje es obligatorio'),
+    validateFields
+],clientPost);
 
 
 
