@@ -1,4 +1,5 @@
 const { check, validationResult } = require('express-validator');
+const axios = require('axios');
 
 const validateFields = ( req, res, next ) => {
     // Se ejecutan las validaciones utilizando la función `validationResult()`
@@ -10,6 +11,7 @@ const validateFields = ( req, res, next ) => {
     
     next();
 }
+
 
 module.exports = {
     validateFields

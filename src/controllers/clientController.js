@@ -40,6 +40,20 @@ const clientPost = async (req, res) => {
     
     const body = req.body;
     
+    // CONSULTAR POR CREACION DE BASE DE DATOS
+    // // Verificar si el correo electrónico ya existe
+    // const existingUser = await User.findOne({ email: body.email });
+    // if (existingUser) {
+    //     res.status(400).send({ error: 'El correo electrónico ya está registrado' });
+    //     return;
+    // }
+
+    // // Crear un nuevo usuario
+    // const newUser = new User(body);
+    // await newUser.save();
+
+    // res.send(newUser);
+
     axios.post(baseURL + '/', body)
     .then( (result) => {
         console.log(result.data);
